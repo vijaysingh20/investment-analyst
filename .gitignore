@@ -1,0 +1,72 @@
+# .gitignore
+
+# ============================================
+# SECRETS - NEVER COMMIT THESE
+# ============================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ============================================
+# PYTHON
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ============================================
+# VIRTUAL ENVIRONMENTS
+# ============================================
+.venv/
+venv/
+ENV/
+env/
+
+# ============================================
+# UV SPECIFIC
+# ============================================
+uv.lock
+# Note: Some teams DO commit uv.lock for reproducibility.
+# For a portfolio project, we'll keep it out for simplicity.
+
+# ============================================
+# IDE & OS
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ============================================
+# LOGS & DATABASES
+# ============================================
+*.log
+*.sqlite3
+*.db
+
+# ============================================
+# CREWAI SPECIFIC
+# ============================================
+crewai_outputs/
+*.crewai/

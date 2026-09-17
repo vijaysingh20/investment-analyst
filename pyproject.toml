@@ -1,0 +1,30 @@
+[project]
+name = "investment-analyst"
+version = "0.1.0"
+description = "A multi-agent CrewAI system that performs automated investment due diligence on companies, producing verifiable research profiles from web sources."
+readme = "README.md"
+authors = [
+    { name = "Vijay Singh", email = "vijaysingh79413@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "crewai>=1.15.22",
+    "crewai-tools>=1.15.22",
+    "fastapi>=0.141.1",
+    "firecrawl-py>=4.43.0",
+    "langchain-openai>=1.6.2",
+    "langfuse>=4.15.4",
+    "psycopg2-binary>=2.9.13",
+    "pydantic>=2.12.5",
+    "python-dotenv>=1.2.3",
+    "sqlmodel>=0.0.42",
+    "tavily-python>=0.8.3",
+    "uvicorn>=0.53.0",
+]
+
+[project.scripts]
+investment-analyst = "investment_analyst:main"
+
+[build-system]
+requires = ["uv_build>=0.11.21,<0.12.0"]
+build-backend = "uv_build"
