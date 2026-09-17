@@ -5,6 +5,7 @@ A production-grade multi-agent system that performs automated venture capital du
 ## 🚀 What It Does
 
 Given a company name, this system:
+
 1. **Researches** the company's fundamentals, funding history, and key products.
 2. **Analyzes** market size (TAM/SAM/SOM), competitive landscape, and moats.
 3. **Audits** for risks including legal issues, financial red flags, and bad press.
@@ -13,7 +14,6 @@ Given a company name, this system:
 ## 🏗️ Architecture
 
 This project uses a **Sequential Multi-Agent Pipeline** with strict Pydantic schemas for data validation between agents.
-
 
 ### Agents
 
@@ -37,6 +37,7 @@ This project uses a **Sequential Multi-Agent Pipeline** with strict Pydantic sch
 ## 🚦 Getting Started
 
 ### Prerequisites
+
 - Python 3.12+
 - `uv` package manager
 - API keys for OpenAI, Tavily, and Firecrawl
@@ -58,8 +59,11 @@ uv sync
 # Set up environment variables
 cp .env.example .env
 # Edit .env and add your API keys
+```
 
-# Project Structure
+## 📁 Project Structure
+
+```text
 src/investment_analyst/
 ├── agents/       # CrewAI Agent definitions
 ├── tasks/        # CrewAI Task definitions
@@ -68,12 +72,15 @@ src/investment_analyst/
 ├── crews/        # Crew orchestration logic
 ├── api/          # FastAPI routes
 └── config/       # Settings and environment management
+```
 
-# Ethical Scraping Notice
-This project strictly adheres to robots.txt and only scrapes publicly available data. We prioritize official APIs (SEC EDGAR, Crunchbase) and ethical scraping tools (Firecrawl) that respect rate limits and site policies.
+## ⚖️ Ethical Scraping Notice
 
-# 📈 Roadmap
-Implement Langfuse observability
-Add human-in-the-loop approval for high-risk investments
-Deploy to AWS with Docker
-Add PostgreSQL persistence for historical memos
+This project strictly adheres to `robots.txt` and only scrapes publicly available data. We prioritize official APIs (SEC EDGAR, Crunchbase) and ethical scraping tools (Firecrawl) that respect rate limits and site policies.
+
+## 📈 Roadmap
+
+- [ ] Implement Langfuse observability
+- [ ] Add human-in-the-loop approval for high-risk investments
+- [ ] Deploy to AWS with Docker
+- [ ] Add PostgreSQL persistence for historical memos
